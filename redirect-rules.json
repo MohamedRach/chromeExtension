@@ -1,0 +1,31 @@
+ [
+      {
+        "id": 1,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "url": "https://example.com/newpage"
+          }
+        },
+        "condition": {
+          "urlFilter": "https://example.com/oldpage"
+        }
+      },
+      {
+        "id": 2,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "url": "https://example.com/anotherpage"
+          }
+        },
+        "condition": {
+          "urlFilter": "https://example.com/oldpage2"
+          
+        }
+      }
+]
+
+  

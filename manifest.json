@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "URL Redirection Extension",
+    "version": "1.0",
+    "description": "A Chrome extension to redirect URLs.",
+    "permissions": [
+      "declarativeNetRequest",
+      "declarativeNetRequestWithHostAccess",
+      "declarativeNetRequestFeedback",
+      "storage",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "https://*/*",
+        "http://*/*"
+    ],
+    "action": {
+      "default_popup": "index.html"
+    },
+    "declarative_net_request": {
+      "rule_resources": [
+        {
+          "id": "redirect_rules",
+          "enabled": true,
+          "path": "redirect-rules.json"
+        }
+      ]
+    }
+  }
+  
